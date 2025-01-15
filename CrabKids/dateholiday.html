@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> 
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            button {
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            input[type="date"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            }
+
+            .container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .all_container {
+                display: grid;
+                place-items: center;
+            }
+            button {
+                background-color: #007bff;
+                color: white;
+                cursor: pointer;
+            }
+            .result {
+                font-size: 18px;
+                margin-top: 20px;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="all_container">
+            <div class="result" id="result"></div>
+            <div class="container">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" class="form-control" size=10><br>
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date"><br>
+            <button onclick="calculateDays()">Calculate Days</button>
+            </div>
+        </div>
+        
+
+        <script>
+            const publicHolidays = [
+                "2025-01-01", // New Year's Day
+                "2025-03-08", // International Women's Day
+                "2025-04-18", // Good Friday
+                "2025-04-21", // Easter Monday
+                "2025-05-01", // Labour Day
+                "2025-05-25", // Africa Freedom Day
+                "2025-07-07", // Heroes Day
+                "2025-07-08", // Unity Day
+                "2025-10-24", // Independence Day
+                "2025-12-25", // Christmas Day
+            ];
+
+            function calculateDays() {
+                const startDate = new Date(document.getElementById("start-date").value);
+                const endDate = new Date(document.getElementById("end-date").value);
+
+                let totalDays = 0;
+                let currentDate = new Date(startDate);
+
+                while (currentDate <= endDate) {
+                    const isoDate = currentDate
+                        .toISOString()
+                        .split("T")[0];
+                    const dayOfWeek = currentDate.getDay();
+
+                    // weekends and public holidays
+                    if (dayOfWeek !== 0 && dayOfWeek !== 6 && !publicHolidays.includes(isoDate)) {
+                        totalDays++;
+                    }
+
+                    // Move to the next day
+                    currentDate.setDate(currentDate.getDate() + 1);
+                }
+
+                document
+                    .getElementById("result")
+                    .textContent = `You have selected ${totalDays} working days, excluding weekends and public holidays.`;
+            }
+        </script>
+    </body>
+</html>

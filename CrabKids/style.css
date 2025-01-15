@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+/*            background-color: #f5f5f5;*/
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    color: white;
+    height: 5%;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px;
+    background-color: white;
+    position: relative; /* Ensure proper positioning for dropdown */
+}
+
+.navbar-logo {
+    position: absolute; /* Place the logo separately */
+    left: 20px; /* Adjust this value as needed */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-menu li {
+    position: relative; /* Required for dropdown */
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: red;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #ff6310;
+    width: 200px;
+    border-radius: 5px;
+    transform: translateY(0);
+}
+
+.navbar-menu.active li {
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+}
+
+.dropdown-arrow {
+    font-size: 12px; /* Size of the arrow */
+    margin-left: 5px; /* Space between text and arrow */
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.dropdown-menu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the parent menu item */
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    color: red;
+}
+
+.navbar-menu li:hover .dropdown-menu {
+    display: block; /* Show the dropdown on hover */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        color: black;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-logo {
+        position: static; /* Adjust position for small screens */
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.hero {
+height: 100vh;
+background: url('imag/Kid-School-Shoes-Supplier.jpg') no-repeat center center/cover;
+background-size: cover;
+display: flex;
+flex-direction: column; /* Ensures vertical stacking */
+align-items: center;
+justify-content: center;
+color: #ff6310;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+text-align: center;
+}
+
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 10px; /* Adds spacing between h1 and p */
+}
+
+.hero p {
+font-size: 1.5rem; /* Adjusts paragraph font size */
+margin: 0; /* Removes any default margins */
+}
+
+.container {
+display: flex;
+align-items: flex-start;
+gap: 15px; /* Space between the image and text */
+margin-left: 45px;
+margin-right: 20px;
+flex-direction: row; /* Default layout for larger screens */
+}
+
+.container img {
+flex-shrink: 0; /* Prevent the image from shrinking */
+width: 400px;
+height: 400px;
+object-fit: cover; /* Ensure the image maintains its aspect ratio */
+}
+
+.imageh  {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 400px;
+    height: 500px;
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+    }
+
+.container p {
+font-size: 16px;
+line-height: 1.6;
+font-style: inherit;
+text-align: justify; /* Align text evenly */
+}
+
+@media (max-width: 768px) {
+.container {
+flex-direction: column; /* Stack items vertically on small screens */
+align-items: center; /* Center align content */
+}
+
+.container img {
+width: 100%; /* Make the image responsive */
+height: auto;
+}
+
+.container p {
+text-align: center; /* Center text for better presentation on small screens */
+margin-top: 15px; /* Add spacing between image and text */
+}
+.reviews {
+grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
+}
+.gallery {
+    grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
+    }
+.hero h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.slideshow {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    margin: 20px 0;
+    background: white;
+}
+
+.slideshow-container {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.slideshow img {
+    height: 100%;
+    width: auto;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.about, .gallery, .reviews, .contact, .footer {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.gallery-item:hover {
+    background: #ff6310;
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.reviews {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 10px; /* Adds space between the boxes */
+padding: 20px;
+text-align: center;
+}
+
+.reviews .box {
+border: 1px solid #ddd;
+margin: 10px;
+border-radius: 10px;
+padding: 10px;
+width: 90%;
+background-color: #ff6310;
+}
+
+.reviews .box img {
+width: 100%;
+border-radius: 10px;
+}
+
+.reviews .box:hover {
+background: #eee;
+border-color: #ff6310;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact textarea, .contact input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#go-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff6310;
+    color: white;
+    padding: 10px;
+    border-radius: 30%;
+    cursor: pointer;
+    display: none;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.lovekids {
+    border-bottom: 2px solid #ff6310;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+
+em {
+    font-style: italic;
+}
+h1 {
+    color: #ff6310;
+}
+/* h2 {
+    color:  #1d22ae;
+} */
+
+.contact-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact-details, .locations {
+    flex: 1 1 45%;
+    margin: 10px;
+}
+.contact-details p, .locations p {
+    margin: 5px 0;
+}
+.social-media {
+    margin: 20px 0;
+}
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+.social-media a i {
+    margin-right: 8px;
+}
+.social-media a:hover {
+    color: #007BFF;
+}
+
