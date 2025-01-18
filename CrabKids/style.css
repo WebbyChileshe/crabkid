@@ -193,7 +193,18 @@ line-height: 1.6;
 font-style: inherit;
 text-align: justify; /* Align text evenly */
 }
-.container h1 {
+/* .container h1 {
+    border: 1px solid #ddd;
+margin: 10px;
+border-radius: 10px;
+padding: 10px;
+width: 90%;
+height: auto;
+/* background-color: #ff6310;
+    float: right;
+} */
+
+.introduction_title {
     border: 1px solid #ddd;
 margin: 10px;
 border-radius: 10px;
@@ -264,8 +275,7 @@ grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
-    gap: 20px;
+    gap: 10px;
 }
 
 .gallery-item {
@@ -285,7 +295,7 @@ grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
     border-radius: 10px;
 }
 
-.reviews, .gallery{
+.reviews{
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 gap: 10px; /* Adds space between the boxes */
@@ -295,7 +305,6 @@ text-align: center;
 
 .reviews .box {
 border: 1px solid #ddd;
-margin: 10px;
 border-radius: 10px;
 padding: 10px;
 width: 90%;
