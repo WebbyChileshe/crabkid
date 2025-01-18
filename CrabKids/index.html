@@ -22,20 +22,20 @@
                         <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About Us</a>
+                        <a href="#about">About Us</a>
                     </li>
                     <li>
                         <a href="#gallery" class="dropdown-toggle">Gallery
                             <span class="dropdown-arrow">&#9662;</span></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#girls">Girls</a>
+                                <a href="#girls">Girls School Shoes</a>
                             </li>
                             <li>
-                                <a href="#boys">Boys</a>
+                                <a href="#boys">Boys School Shoes</a>
                             </li>
                             <li>
-                                <a href="#unisex">Unisex</a>
+                                <a href="#unisex">Unisex Shoes</a>
                             </li>
                         </ul>
                     </li>
@@ -72,6 +72,25 @@
                 <!-- Add more images as needed -->
             </div>
         </section>
+
+        <section id="" class="reviews">
+            <center id="about" class="lovekids"><h2>About Us!</h2></center>
+        </section>
+            <div class="container">
+                <img src="image/girl.jpg" alt="Skeleton" title = "Skeleton" width="300" height="400">
+                   <h1><strong>OUR MISSION</strong></h1>
+                  <p>Mission: At Sanji foot ware hub  Zambia, our mission is to provide high-quality, durable, comfortable,and affordable
+                     school products that enhance the self-esteem and confidence of learners,
+                      enabling them to reach their full academic potential. We are committed to delivering exceptional value to our customers.
+                      <br><br><br>
+                      <h1><strong>OUR VISION</strong></h1> At Sanji foot ware hub , our vision is to emerge as the premier provider of high-quality, innovative leather products,<br>
+                       including school shoes, sports footwear, school bags, and baby essentials, in Zambia, SADC, and COMESA regions.<br> We aim to empower
+                       schools, parents, and children by delivering exceptional products that combine cutting-edge technology, expert craftsmanship, and continuous quality improvement.
+                        Through our commitment to excellence, we strive to become the trusted partner of choice for educational institutions and families, driving growth, and making a positive impact in our communities.
+
+                </p>
+            </div>
+
         <section id="girls" class="reviews">
             <center id="about" class="lovekids">
                 <h2>Love Kids Love Crabkids!</h2>
@@ -83,14 +102,11 @@
                 alt="Skeleton"
                 title="Skeleton"
                 width="300"
-                height="400">
-            <h1 style="color: #ff3987">
+                height="auto">
+            <h1 style="color: #ff3987;">
                 <strong>BUY GIRLS COMFORTABLE<br>
-                    SHOES</strong>
-            </h1>
-            <img
-                style="height: 300px; width: 335px; display: block;"
-                src="image/Comfortable.png"></p>
+                    SHOES </strong>
+            </h1></p>
     </div>
 
     <section id="about" class="gallery">
@@ -116,6 +132,7 @@
             <p>Size: 6, Gender: Girls, Color: Red, Type: Sneakers</p>
         </div>
     </section>
+    <a href="girls_more_shoes.html" class="see_more">See More Girls Shoes</a>
 
     <section id="boys" class="reviews">
         <center class="lovekids">
@@ -124,17 +141,16 @@
     </section>
 
     <div class="container">
-        <img
+        <!-- <img
             src="image/durable.png"
             alt="Skeleton"
-            title="Skeleton"
-            style="width: 400px; height: 389px;">
+            title="Skeleton"> -->
         <h1>
             <strong>BUY BOYS DURABLE<br>
                 SHOES</strong>
         </h1><br>
         <img
-            style="height: 580px; width: 530px; display: block;"
+            style=" height: auto;"
             src="image/crabkid_catoon1.png"></p>
 </div>
 <section id="about" class="gallery">
@@ -159,18 +175,25 @@
         <p>Size: 8, Gender: Boys, Color: Black, Type: Sneakers</p>
     </div>
 </section>
+<a href="boys_more_shoes.html" class="see_more">See More Boys Shoes</a>
 
-<section id="" class="reviews">
-    <center id="about" class="lovekids"><h2>About Us!</h2></center>
-</section>
-    <div class="container">
-        <img src="image/girl.jpg" alt="Skeleton" title = "Skeleton" width="300" height="400">
-           <h1><strong>OUR MISSION</strong></h1>
-          <p>Mission: At Sanji foot ware hub  Zambia, our mission is to provide<br> high-quality, durable, comfortable,and affordable
-             school products that enhance the self-esteem and confidence of learners,
-              enabling them to reach their full academic potential. We are committed to delivering exceptional value to our customers.
-        </p>
-    </div>
+<ul>
+    <h1>We aim to ensure the market has:
+    </h1><strong><span>
+    <li>Durable and comfortable products.</span></strong></li><br>
+    <li><strong><span>Budget-friendly prices.</span></strong>
+    </li><br>
+    <li><strong><span>Wide range of products (shoes, bags, etc.)</span></strong>
+    </li><br>
+    <li><strong><span>Commitment to excellence and customer satisfaction...</span></strong>
+
+    </li>
+</ul>
+
+<div class="counter">
+    <h2>Happy Customers</h2>
+    <p class="number" id="customer-count">0</p>
+</div>
 
 <section id="about" class="reviews">
     <center class="lovekids">
@@ -214,6 +237,24 @@
     <div class="box">
         <img src="image/review.jpg" alt="Client 2">
         <p>Highly recommend Crabkids!</p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-slider">
+        <div class="testimonial">
+            <p>"The best shoe store I've ever visited! Highly recommend."</p>
+            <h4>- Jane Doe</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Amazing collection and great customer service."</p>
+            <h4>- John Smith</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Affordable and durable shoes for my kids!"</p>
+            <h4>- Sarah Lee</h4>
+        </div>
     </div>
 </section>
 
@@ -283,6 +324,15 @@
             .classList
             .toggle('active');
     });
+
+            // Counter animation
+            let count = 0;
+        const counter = document.getElementById('customer-count');
+        const interval = setInterval(() => {
+            count += 10;
+            counter.textContent = count;
+            if (count >= 5000) clearInterval(interval);
+        }, 50);
 </script>
 </body>
 </html>
