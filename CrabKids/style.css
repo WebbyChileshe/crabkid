@@ -1,5 +1,6 @@
 body {
-    margin: 0;
+    /* margin: 0; */
+    margin-top: 0%;
     font-family: 'Arial', sans-serif;
     background-color: white;
 /*            background-color: #f5f5f5;*/
@@ -61,7 +62,7 @@ header {
     cursor: pointer;
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 30px;
 }
 
 .navbar-menu.active {
@@ -83,7 +84,7 @@ header {
 }
 
 .dropdown-arrow {
-    font-size: 12px; /* Size of the arrow */
+    font-size: 18px; /* Size of the arrow */
     margin-left: 5px; /* Space between text and arrow */
     transition: transform 0.3s ease; /* Smooth rotation */
 }
@@ -192,6 +193,16 @@ line-height: 1.6;
 font-style: inherit;
 text-align: justify; /* Align text evenly */
 }
+.container h1 {
+    border: 1px solid #ddd;
+margin: 10px;
+border-radius: 10px;
+padding: 10px;
+width: 90%;
+height: auto;
+/* background-color: #ff6310; */
+    float: right;
+}
 
 @media (max-width: 768px) {
 .container {
@@ -252,7 +263,8 @@ grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
     gap: 20px;
 }
 
@@ -273,7 +285,7 @@ grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
     border-radius: 10px;
 }
 
-.reviews {
+.reviews, .gallery{
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 gap: 10px; /* Adds space between the boxes */
@@ -381,3 +393,64 @@ h1 {
     color: #007BFF;
 }
 
+.counter {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    text-align: center;
+}
+.counter .number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff;
+}
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* General button styles */
+.see_more{
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF; /* Primary blue color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects */
+.see_more:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus styles for accessibility */
+.see_more:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 3px;
+}
