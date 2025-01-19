@@ -3,23 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crabkids Zambia Distributor</title>
+    <title>Crabkids | Boys Shoes</title>
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body>        <header>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="image/Crabkids_Logo.png" alt="Crabkid logo" width="200px">
+        </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="index.html #home">About Us</a>
+            </li>
+            <li>
+                <a href="#gallery" class="dropdown-toggle">Our Services
+                    <span class="dropdown-arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#girls">Girls Shoes</a>
+                    </li>
+                    <li>
+                        <a href="#boys">Boys Shoes</a>
+                    </li>
+                    <li>
+                        <a href="#sneakers">Sneakers</a>
+                    </li>
+                    <li>
+                        <a href="#uniforms">Uniforms</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#reviews">Reviews</a>
+            </li>
+            <li>
+                <a href="#contacts">Contact</a>
+            </li>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+        </ul>
+    </div>
+</header><br><br>
     <section id="boys" class="reviews">
         <center class="lovekids">
-            <p>Boys Shoes</p>
+            <h2>The Little Men </h2>
         </center>
     </section>
-
     <div class="container">
-        <div class="introduction_title">
-        <h1>
-            <strong>BUY BOYS DURABLE SHOES</strong>
-        </h1></div<br>
+        <div class="introduction_titl">
+            <h1 style="color: #ff3987; text-align: center;">
+                <strong>Kick off the year in style with Crabkids Boys' School Shoes</strong>
+            </h1>
+            <p style="text-align: center;">At Crabkid Zambia Distributor, we believe that a clean Uniform, high Quality pair of school shoes and a nice school bag
+                improves the self confidence of the learners and inturn helps them to improve in academic performance</p>
+        </div>
         <img
-            style=" display: block; height: auto;"
+            style=" height: auto;"
             src="image/crabkid_catoon1.png"></p>
 </div>
 <section id="about" class="gallery">
@@ -44,5 +88,42 @@
         <p>Size: 8, Gender: Boys, Color: Black, Type: Sneakers</p>
     </div>
 </section>
+
+<script>
+
+    // Scroll to top functionality
+    const goTopButton = document.getElementById('go-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            goTopButton.style.display = 'block';
+        } else {
+            goTopButton.style.display = 'none';
+        }
+    });
+
+    goTopButton.addEventListener('click', () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Navbar toggle for small screens
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navbarMenu
+            .classList
+            .toggle('active');
+    });
+
+            // Counter animation
+            let count = 0;
+        const counter = document.getElementById('customer-count');
+        const interval = setInterval(() => {
+            count += 10;
+            counter.textContent = count;
+            if (count >= 5000) clearInterval(interval);
+        }, 50);
+</script>
 </body>
 </html>
