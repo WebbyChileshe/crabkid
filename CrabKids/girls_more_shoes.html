@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crabkids Zambia Distributor</title>
+    <title>Crabkids | Girls Shoes</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+
+    <header>
+        <div class="navbar">
+            <div class="navbar-logo">
+                <img src="image/Crabkids_Logo.png" alt="Crabkid logo" width="200px">
+            </div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html #home">About Us</a>
+                </li>
+                <li>
+                    <a href="#gallery" class="dropdown-toggle">Our Services
+                        <span class="dropdown-arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#girls">Girls Shoes</a>
+                        </li>
+                        <li>
+                            <a href="#boys">Boys Shoes</a>
+                        </li>
+                        <li>
+                            <a href="#sneakers">Sneakers</a>
+                        </li>
+                        <li>
+                            <a href="#uniforms">Uniforms</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#reviews">Reviews</a>
+                </li>
+                <li>
+                    <a href="#contacts">Contact</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </header><br><br>
+
+
     <section id="girls" class="reviews">
         <center id="about" class="lovekids">
             <h2>Love Kids Love Crabkids!</h2>
@@ -19,11 +65,11 @@
             title="crabkid_ride"
             width="300"
             height="auto">
-        <div class="introduction_title">
-        <h1 style="color: #ff3987;">
-            <strong>BUY GIRLS COMFORTABLE<br>
-                SHOES </strong>
-        </h1></div>
+            <div class="introduction_titl">
+        <h1 style="color: #ff3987; text-align: center;">
+            <strong>BUY GIRLS COMFORTABLE SHOES </strong> </h1>  </div>
+        <div class="container_sub">
+        </div>
 </div>
 
 <section id="about" class="gallery">
@@ -50,5 +96,41 @@
     </div>
 </section>
 
+<script>
+
+    // Scroll to top functionality
+    const goTopButton = document.getElementById('go-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            goTopButton.style.display = 'block';
+        } else {
+            goTopButton.style.display = 'none';
+        }
+    });
+
+    goTopButton.addEventListener('click', () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Navbar toggle for small screens
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navbarMenu
+            .classList
+            .toggle('active');
+    });
+
+            // Counter animation
+            let count = 0;
+        const counter = document.getElementById('customer-count');
+        const interval = setInterval(() => {
+            count += 10;
+            counter.textContent = count;
+            if (count >= 5000) clearInterval(interval);
+        }, 50);
+</script>
 </body>
 </html>
