@@ -2,7 +2,6 @@
 
 
 .layout_padding {
-  padding-top: 120px;
   padding-bottom: 120px;
 }
 
@@ -480,6 +479,7 @@ a:focus {
 }
 
 .service_section .box {
+  margin-top: 30px;
   text-align: center;
   -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
@@ -499,8 +499,8 @@ a:focus {
 }
 
 .service_section .box .img-box {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,8 +532,8 @@ a:focus {
 }
 
 .service_section .box:hover {
-  background-color:#ff6310;
-  ;
+  background-color: #ff6310;
+  color: #ffffff;
 }
 
 .service_section .btn-box {
