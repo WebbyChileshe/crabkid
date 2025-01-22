@@ -1,8 +1,9 @@
 body {
     margin: 0;
     font-family: 'New Times Roman', sans-serif;
+    font-size: 16px;
     background-color: white;
-/*            background-color: #f5f5f5;*/
+/*  background-color: #f5f5f5;*/
     scroll-behavior: smooth;
 }
 
@@ -213,7 +214,6 @@ flex-direction: column; /* Ensures vertical stacking */
 align-items: center;
 justify-content: center;
 color: #ff6310;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 text-align: center;
 }
 
@@ -245,7 +245,7 @@ margin: 0; /* Removes any default margins */
   }
   
 
-.container {
+.containers {
 display: flex;
 align-items: flex-start;
 gap: 15px; /* Space between the image and text */
@@ -263,7 +263,7 @@ flex-direction: row; /* Default layout for larger screens */
     flex-direction: row; /* Default layout for larger screens */
     }
 
-.container img {
+.containers img {
 flex-shrink: 0; /* Prevent the image from shrinking */
 width: 400px;
 height: 400px;
@@ -271,19 +271,22 @@ object-fit: cover; /* Ensure the image maintains its aspect ratio */
 }
 
 
-.girl_button {
-    display: inline-block;
-    font-family: 'Merriweather Sans', sans-serif;
-    text-transform: uppercase;
-    align-items: center;
-    align-content: center;
-    padding: 10px 45px;
-    background-color: #ff8a1d;
-    border: 1px solid #ff8a1d;
-    border-radius: 5px;
-    color: #ffffff;
-    margin-top: 15px;
-  }
+.detail-box a{
+  display: inline-block;
+  font-family: 'Merriweather Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  background-color: #0355cc;
+  border: 1px solid #0355cc;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.detail-box a:hover {
+  background-color: transparent;
+  color: #0355cc;
+}
 
 .imageh  {
     flex-shrink: 0; /* Prevent the image from shrinking */
@@ -292,7 +295,7 @@ object-fit: cover; /* Ensure the image maintains its aspect ratio */
     object-fit: cover; /* Ensure the image maintains its aspect ratio */
     }
 
-.container p {
+.containers p {
 font-size: 16px;
 line-height: 1.6;
 font-style: inherit;
@@ -321,17 +324,28 @@ height: auto;
 }
 
 @media (max-width: 768px) {
-.container {
+.containers {
 flex-direction: column; /* Stack items vertically on small screens */
 align-items: center; /* Center align content */
 }
 
-.container img {
+.containers img {
 width: 100%; /* Make the image responsive */
 height: auto;
 }
 
-.container p {
+img {
+    .containers img {
+        width: 100%; /* Make the image responsive */
+        height: auto;
+        }
+}
+
+.about_section .img-box img {
+    width: 100%;
+  }
+
+.containers p {
 text-align: center; /* Center text for better presentation on small screens */
 margin-top: 15px; /* Add spacing between image and text */
 }
@@ -400,31 +414,21 @@ grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
     border-radius: 5px;
 }
 
-.reviews{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-gap: 10px; /* Adds space between the boxes */
-padding: 20px;
-text-align: center;
-}
 
-.reviews .box {
+
+/* .reviews {
 border: 1px solid #ddd;
 border-radius: 10px;
 padding: 10px;
 width: 90%;
 background-color: #ff6310;
-}
+} */
 
-.reviews .box img {
+/* .reviews img {
 width: 100%;
 border-radius: 10px;
-}
+} */
 
-.reviews .box:hover {
-background: #eee;
-border-color: #ff6310;
-}
 
 .contact form {
     display: flex;
@@ -437,6 +441,15 @@ border-color: #ff6310;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+.top-bar a{
+    display: inline-block;
+    font-family: 'Merriweather Sans', sans-serif;
+    padding: 10px 45px;
+    background-color: hsl(108, 88%, 44%);
+    border-radius: 5px;
+    color: #ffffff;
+  }
 
 #go-top {
     position: fixed;
@@ -536,38 +549,45 @@ h1 {
     cursor: pointer;
 }
 
+.detail-box a{
+    display: inline-block;
+    font-family: 'Merriweather Sans', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 45px;
+    background-color: #0355cc;
+    border: 1px solid #0355cc;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-top: 15px;
+  }
+  
+  .detail-box a:hover {
+    background-color: transparent;
+    color: #0355cc;
+  }
+
 /* General button styles */
-.see_more{
+.see_more a{
         position: absolute;
         display: inline-block;
         font-family: 'Merriweather Sans', sans-serif;
         text-transform: uppercase;
         padding: 10px 45px;
-        background-color: #ff8a1d;
-        border: 1px solid #ff8a1d;
+        background-color:  #0355cc;
+        border: 1px solid  #0355cc;
         border-radius: 5px;
         color: #ffffff;
         margin-top: 15px;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 16px;
-        font-weight: bold;
-        text-decoration: none;
-        text-align: center;
         cursor: pointer;
 }
 
 /* Hover effects */
-.see_moe:hover {
-    background-color: #0056b3; /* Darker blue */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
+.see_more a:hover {
+    background-color: transparent;
+    color: #0355cc;
+  }
 
-/* Focus styles for accessibility */
-.see_moe:focus {
-    outline: 2px solid #0056b3;
-    outline-offset: 3px;
-}
 
 /* ............................... */
