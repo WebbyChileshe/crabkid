@@ -7,22 +7,12 @@ body {
     scroll-behavior: smooth;
 }
 
-.top-bar {
-    display: flex;
-    color: white;
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center; /* Vertically center items */
-    background-color: black;
-    position: fixed; /* Keep the bar fixed */
-    top: 0; /* Stick to the top */
-    width: 100%;
-    z-index: 1001; /* Higher stacking for visibility */
-}
+
 
 /* Ensure header stays fixed below the top-bar */
 header {
     position: fixed;
-    top: 50px; /* Positioned just below the top-bar */
+    top: 0px; /* Positioned just below the top-bar */
     width: 100%;
     background: white;
     color: black;
@@ -207,22 +197,24 @@ body {
 
 .hero {
 height: 100vh;
-background: url('image/mainback2.jpg') no-repeat center center/cover;
+background: url('image/Kid-School-Shoes-Supplier.jpg') no-repeat center center/cover;
 background-size: cover;
 display: flex;
 flex-direction: column; /* Ensures vertical stacking */
 align-items: center;
 justify-content: center;
-color: #ff6310;
 text-align: center;
 }
 
 .hero h1 {
+    color: #ff6310;
 font-size: 5rem;
 margin-bottom: 10px; /* Adds spacing between h1 and p */
 }
 
 .hero p {
+    /* color: #0355cc; */
+    color: #fff;
 font-size: 1.5rem; /* Adjusts paragraph font size */
 margin: 0; /* Removes any default margins */
 }
@@ -399,7 +391,7 @@ grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
 
 .gallery-item {
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     transition: background 0.2s, transform 0.2s;
 }
@@ -490,7 +482,8 @@ h1 {
 
 .contact-section {
     padding: 20px;
-    background-color: #f4f4f4;
+    color: #fff;
+    background-color: #343a40;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -508,7 +501,7 @@ h1 {
 .social-media a {
     margin: 0 10px;
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 20px;
     display: inline-flex;
     align-items: center;
@@ -575,7 +568,7 @@ h1 {
         padding: 10px 45px;
         background-color:  #0355cc;
         border: 1px solid  #0355cc;
-        border-radius: 5px;
+        /* border-radius: 5px; */
         color: #ffffff;
         margin-top: 15px;
         left: 50%;
@@ -587,6 +580,27 @@ h1 {
 .see_more a:hover {
     background-color: transparent;
     color: #0355cc;
+  }
+
+  .im-bo  {
+    position: relative;
+        margin-top: 30px;
+        text-align: center;
+        -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+        padding: 25px 15px;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
   }
 
 
