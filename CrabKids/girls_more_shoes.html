@@ -75,10 +75,10 @@
 
     <section id="girls" class="reviews">
         <center id="about" class="lovekids">
-            <h2><strong>Love Kids Love Crabkids!</strong></h2>
+            <h2><strong>LOVE KIDS LOVE CRABKIDS!</strong></h2>
         </center>
     </section>
-    <div class="container">
+    <div class="containers">
         <img
             src="image/crabkid_catoons.png"
             alt="crabkid_ride"
@@ -86,71 +86,55 @@
             width="300"
             height="auto">
             <div class="introduction_titl">
-        <h1 style="color: #ff3987; text-align: center;">
-            <strong>BUY GIRLS COMFORTABLE SHOES </strong> </h1>  </div>
+        <h2 style=" color: #ff3987;   text-align: center;"><strong>Crabkids Comfortable School Shoes for the Princesses</strong></h2>  </div>
         <div class="container_sub">
         </div>
 </div>
 
-<section id="about" class="gallery">
+<section id="girl" class="gallery">
     <div class="gallery-item">
-        <img src="image/shoe.png" alt="Girls Shoe 1">
-        <p>Size: 5, Gender: Girls, Color: Pink, Type: Sandals</p>
+        <img src="image/girl1.jpg" alt="Girls Shoe 1">
     </div>
 
     <div class="gallery-item">
-        <img src="image/shoe1.png" alt="Girls Shoe 2">
-        <p>Size: 6, Gender: Girls, Color: Red, Type: Sneakers</p>
+        <img src="image/girl2.jpg" alt="Girls Shoe 2">
     </div>
     <div class="gallery-item">
-        <img src="image/shoe2.png" alt="Girls Shoe 2">
-        <p>Size: 6, Gender: Girls, Color: Red, Type: Sneakers</p>
+        <img src="image/girl3.jpg" alt="Girls Shoe 2">
     </div>
     <div class="gallery-item">
-        <img src="image/shoe3.png" alt="Girls Shoe 2">
-        <p>Size: 6, Gender: Girls, Color: Red, Type: Sneakers</p>
+        <img src="image/girl4.jpg" alt="Girls Shoe 2">
     </div>
     <div class="gallery-item">
-        <img src="image/shoe4.png" alt="Girls Shoe 2">
-        <p>Size: 6, Gender: Girls, Color: Red, Type: Sneakers</p>
+        <img src="image/girl5.jpg" alt="Girls Shoe 2">
     </div>
-</section>
+    <div class="gallery-item">
+        <img src="image/girl6.jpg" alt="Girls Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/girl7.jpg" alt="Girls Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/girl8.jpg" alt="Girls Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/girl9.jpg" alt="Girls Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/girl10.jpg" alt="Girls Shoe 2">
+    </div>
+</section><br>
 
+<script src="lightbox.js"></script>
 <script>
+               
+           // Menu toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbarMenu = document.getElementById("navbar-menu");
 
-    // Scroll to top functionality
-    const goTopButton = document.getElementById('go-top');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            goTopButton.style.display = 'block';
-        } else {
-            goTopButton.style.display = 'none';
-        }
-    });
-
-    goTopButton.addEventListener('click', () => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-
-    // Navbar toggle for small screens
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbarMenu = document.getElementById('navbar-menu');
-
-    menuToggle.addEventListener('click', () => {
-        navbarMenu
-            .classList
-            .toggle('active');
-    });
-
-            // Counter animation
-            let count = 0;
-        const counter = document.getElementById('customer-count');
-        const interval = setInterval(() => {
-            count += 10;
-            counter.textContent = count;
-            if (count >= 5000) clearInterval(interval);
-        }, 50);
+  menuToggle.addEventListener("click", () => {
+    navbarMenu.classList.toggle("active");
+  });
 </script>
 </body>
 </html>
