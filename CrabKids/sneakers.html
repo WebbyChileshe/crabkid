@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css";
+</head>
+<body>
+    
+</body>
+</html>
+<header style="height: 20px;">
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="image/Crabkids_Logo.png" alt="Crabkid logo" width="130px">
+        </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="#gallery" class="dropdown-toggle">Our Services
+                    <span class="dropdown-arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="girls_more_shoes.html">Girls Shoes</a>
+                    </li>
+                    <li>
+                        <a href="boys_more_shoes.html">Boys Shoes</a>
+                    </li>
+                    <li>
+                        <a href="sneakers.html">Sneakers</a>
+                    </li>
+                    <li>
+                        <a href="uniforms.html">Uniforms</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="index.html">Reviews</a>
+            </li>
+            <li>
+                <a href="index.html">Contact</a>
+            </li>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+        </ul>
+    </div>
+</header><br><br>  
+
+<section id="sneakers" class="reviews">
+    <center class="lovekids">
+        <h2><strong>Lace Up for Fun!</strong> </h2>
+    </center>
+</section>
+<div class="containers">
+    <div class="introduction_titl">
+        <h1 style="color: #ff3987;">
+            <strong>Crabkids Sneakers for school sports Day</strong>
+        </h1>
+        <div class="container_ub">
+            
+            <p style="text-align: center;"><span>For comfort and support, so your kids can focus on having fun<br>
+            Whether its running, jumping or playing sports, our snekers are designed to keep up with your kids
+            lifestyle<br>
+            In different colors and designs so your kids can express their personality and stand out from the crowd<br><br>
+</p>
+        </div>
+    </div>
+    <img
+    src="image/sneakers.jpg"
+    alt="Skeleton"
+    title="Skeleton"
+    width="300"
+    height="auto"
+    style="border-radius: 8px;">
+</div><br><br>
+
+<section id="about" class="gallery">
+    <div class="gallery-item">
+        <img src="image/sneaker1.jpg" alt="Boys Shoe 1">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneaker2.jpg" alt="Boys Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneaker3.jpg" alt="Boys Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneaker4.jpg" alt="Boys Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneaker5.jpg" alt="Boys Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneaker6.jpg" alt="Boys Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneaker7.jpg" alt="Boys Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneaker8.jpg" alt="Boys Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneaker9.jpg" alt="Boys Shoe 2">
+    </div>
+    <div class="gallery-item">
+        <img src="image/sneakers.jpg" alt="Boys Shoe 2">
+    </div>
+</section>
+<script src="lightbox.js"></script>
+<script>
+               
+           // Menu toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbarMenu = document.getElementById("navbar-menu");
+
+  menuToggle.addEventListener("click", () => {
+    navbarMenu.classList.toggle("active");
+  });
+</script>
