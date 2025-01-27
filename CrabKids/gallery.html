@@ -62,13 +62,6 @@
         }
     </style>
     <body>
-
-        <div class="top-bar">
-            <div class="logo">
-                <p>Crabkid Zambia Distributor</p>
-            </div>
-            <button type="button" class="btn btn-success">Buy Now</button>
-        </div>
     </div>
     <header style="height: 20px;">
         <div class="navbar">
@@ -165,5 +158,16 @@
         <img src="image/crabkids5.jpg" alt="Boys Shoe 2">
     </div>
 </section>
+<script src="lightbox.js"></script>
+<script>
+               
+    // Menu toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navbarMenu = document.getElementById("navbar-menu");
+
+menuToggle.addEventListener("click", () => {
+navbarMenu.classList.toggle("active");
+});
+</script>
 </body>
 </html>
