@@ -207,7 +207,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    animation: slideBackground 45s infinite; /* Keyframe animation for sliding */
+    animation: slideBackground 65s infinite; /* Keyframe animation for sliding */
   }
   
   @keyframes slideBackground {
