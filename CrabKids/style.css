@@ -207,8 +207,25 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-     /* Keyframe animation for sliding */
+    /* animation: slideBackground 45s infinite; Keyframe animation for sliding */
   }
+  
+  /* @keyframes slideBackground {
+    0% {
+      background: url('image/crabkid_workshop.jpg') no-repeat center center/cover;
+    }
+    33% {
+      background: url('image/back1.jpg') no-repeat center center/cover;
+    }
+    66% {
+      background: url('image/crabkids.jpg') no-repeat center center/cover;
+    }
+    100% {
+      background: url('image/back1.jpg') no-repeat center center/cover;
+    }
+  } */
+  
+
 .hero h1 {
     color: #ff6310;
 font-size: 5rem;
@@ -395,7 +412,7 @@ grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
 .gallery-item {
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     transition: background 0.2s, transform 0.2s;
 }
 
@@ -406,7 +423,7 @@ grid-template-columns: repeat(2, 1fr); /* Ensure two boxes per row */
 
 .gallery-item img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 
