@@ -93,66 +93,43 @@
     as shoes,uniforms and school bags for our children so that you don't keep
     spending every term!!</p>
 
-<section id="about" class="gallery">
-    <div class="gallery-item">
-        <img src="image/shoe5.png" alt="Boys Shoe 1">
-        <p>Size: 7, Gender: Boys, Color: Blue, Type: Boots</p>
-    </div>
-    <div class="gallery-item">
-        <img src="image/shoe6.png" alt="Boys Shoe 2">
-        <p>Size: 8, Gender: Boys, Color: Black, Type: Sneakers</p>
-    </div>
-    <div class="gallery-item">
-        <img src="image/shoe6.png" alt="Boys Shoe 2">
-        <p>Size: 8, Gender: Boys, Color: Black, Type: Sneakers</p>
-    </div>
-    <div class="gallery-item">
-        <img src="image/shoe6.png" alt="Boys Shoe 2">
-        <p>Size: 8, Gender: Boys, Color: Black, Type: Sneakers</p>
-    </div>
-    <div class="gallery-item">
-        <img src="image/shoe6.png" alt="Boys Shoe 2">
-        <p>Size: 8, Gender: Boys, Color: Black, Type: Sneakers</p>
-    </div>
-</section><br>
-
+    <section id="about" class="gallery">
+        <div class="gallery-item">
+            <img src="image/boy1.jpg" alt="Boys Shoe 1">
+        </div>
+        <div class="gallery-item">
+            <img src="image/boy2.jpg" alt="Boys Shoe 2">
+        </div>
+        <div class="gallery-item">
+            <img src="image/boy3.jpg" alt="Boys Shoe 2">
+        </div>
+        <div class="gallery-item">
+            <img src="image/boy4.jpg" alt="Boys Shoe 2">
+        </div>
+        <div class="gallery-item">
+            <img src="image/boy5.jpg" alt="Boys Shoe 2">
+        </div>
+        <div class="gallery-item">
+            <img src="image/boy6.jpg" alt="Boys Shoe 2">
+        </div>
+        <div class="gallery-item">
+            <img src="image/boy7.jpg" alt="Boys Shoe 2">
+        </div>
+        <div class="gallery-item">
+            <img src="image/boy8.jpg" alt="Boys Shoe 2">
+        </div>
+    </section><br>
+<script src="lightbox.js"></script>
 <script>
+               
+           // Menu toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbarMenu = document.getElementById("navbar-menu");
 
-    // Scroll to top functionality
-    const goTopButton = document.getElementById('go-top');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            goTopButton.style.display = 'block';
-        } else {
-            goTopButton.style.display = 'none';
-        }
-    });
-
-    goTopButton.addEventListener('click', () => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-
-    // Navbar toggle for small screens
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbarMenu = document.getElementById('navbar-menu');
-
-    menuToggle.addEventListener('click', () => {
-        navbarMenu
-            .classList
-            .toggle('active');
-    });
-
-    // Counter animation
-    let count = 0;
-    const counter = document.getElementById('customer-count');
-    const interval = setInterval(() => {
-        count += 10;
-        counter.textContent = count;
-        if (count >= 5000) 
-            clearInterval(interval);
-        }
-    , 50);
+  menuToggle.addEventListener("click", () => {
+    navbarMenu.classList.toggle("active");
+  });
+</script>
 </script>
 </body>
 </html>
