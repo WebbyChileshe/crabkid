@@ -46,9 +46,8 @@ body {
 .navbar-logo {
     position: absolute; /* Place the logo separately */
     left: 20px; /* Adjust this value as needed */
-    font-size: 10px;
+    font-size: 30px;
     font-weight: bold;
-    width: 200px;
 }
 
 .navbar-menu{
@@ -166,6 +165,11 @@ body {
     text-decoration: none;
 }
 
+.dropdown-menu {
+    color: black;
+    text-decoration: none;
+}
+
 .dropdown-menu li a:hover {
     color: red;
 }
@@ -186,12 +190,16 @@ body {
 
     .navbar-logo {
         position: static; /* Adjust position for small screens */
-        margin-bottom: 10px;
+        text-align: center;
     }
 
     .navbar {
         flex-direction: column;
         justify-content: center;
+    }
+    .dropdown-menu{
+        color: black;
+        text-decoration: none;
     }
 }
 .hero {
@@ -201,7 +209,7 @@ body {
 
 .hero {
     height: 100vh;
-    background: url('image/back1.jpg') no-repeat center center/cover;
+    background: url('image/back1.png') no-repeat center center/cover;
     display: flex;
     flex-direction: column; /* Ensures vertical stacking */
     align-items: center;
